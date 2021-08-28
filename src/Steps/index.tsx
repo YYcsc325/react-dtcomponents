@@ -1,7 +1,6 @@
 import React, { FC, useRef, useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { childrenToArray, childrenClone } from '@/utils/utils';
-import { Empty } from 'antd';
 
 import styles from './index.less';
 
@@ -22,7 +21,6 @@ const Steps: FC<IStepsProps> & {
   const childList = childrenToArray(children);
   return (
     <div className={styles.steps}>
-      <Empty />
       {childList.map((child: any, index: number) => {
         const targetIndex = index + 1;
         return childrenClone(child, {
