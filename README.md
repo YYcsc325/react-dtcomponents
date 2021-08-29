@@ -1,6 +1,6 @@
 # react-dtcomponents
 
-## Getting Started
+## Getting Started 使用
 
 Install dependencies,
 
