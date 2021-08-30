@@ -18,6 +18,14 @@
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
+  "sideEffects": [
+    "*.css"
+  ],
+  "homepage": "https://yycsc325.github.io/react-dtcomponents",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YYcsc325/react-dtcomponents"
+  },
   "lint-staged": {
     "*.{js,jsx,less,md,json}": [
       "prettier --write"
