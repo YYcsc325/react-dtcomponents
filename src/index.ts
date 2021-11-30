@@ -1,8 +1,8 @@
 import * as util from './utils/utils';
 import * as hook from './utils/hooks';
-
+import * as filetransfor from './utils/filetransfors';
 const hooks = { ...hook };
-const utils = { ...util };
+const utils = { ...util, ...filetransfor };
 
 export { utils, hooks };
 

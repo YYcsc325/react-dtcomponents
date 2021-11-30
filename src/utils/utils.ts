@@ -199,10 +199,25 @@ export function isInteger(num: number) {
   return num % 1 === 0;
 }
 
-export function loadImg(url: string, callback: Function) {
-  var img = new Image();
-  img.src = url;
-  img.onload = () => {
-    callback?.();
-  };
+/** 异步加载资源 */
+export function loadImg(url: string) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.src = url;
+    image.onload = () => {
+      resolve(image);
+    };
+    image.onerror = (err) => {
+      reject(err);
+    };
+  });
+}
+
+/** url资源转换成file对象 */
+export async function imageToFile(dataURL: string) {
+  const res = await fetch(dataURL);
+  const blob = await res.blob();
+  return new File([blob], `${new Date().valueOf().toString()}.png`, {
+    type: 'image/png',
+  });
 }
