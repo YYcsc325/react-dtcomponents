@@ -198,11 +198,3 @@ export function ellipsis(str: string, num: number = 10) {
 export function isInteger(num: number) {
   return num % 1 === 0;
 }
-
-export function loadImg(url: string, callback: Function) {
-  var img = new Image();
-  img.src = url;
-  img.onload = () => {
-    callback?.();
-  };
-}
