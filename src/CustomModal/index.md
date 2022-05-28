@@ -1,6 +1,6 @@
 ## CustomModal
 
-### 用法
+### 功能描述：可自定义或 api 式调用 modal
 
 ```jsx
 import React, { useState } from 'react';

@@ -1,6 +1,6 @@
 ## Steps
 
-### 用法
+### 功能描述：横向步骤条
 
 ```jsx
 import React from 'react';

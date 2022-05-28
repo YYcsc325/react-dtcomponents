@@ -1,6 +1,6 @@
 ## CardTabs
 
-### 用法
+### 功能描述：自定义 tab
 
 ```jsx
 import React from 'react';

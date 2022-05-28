@@ -1,6 +1,6 @@
 ## DragForm
 
-### 用法
+### 功能描述： 简易 From 实现
 
 ```jsx
 import React from 'react';

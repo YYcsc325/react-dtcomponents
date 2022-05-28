@@ -1,6 +1,6 @@
 ## AverageLabel
 
-### 用法
+### 功能描述：可自定义一行展示几个
 
 ```tsx
 import React from 'react';
