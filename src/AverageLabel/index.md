@@ -1,8 +1,20 @@
-## AverageLabel
+---
 
-### 功能描述：可自定义一行展示几个
+title: 一行展示组件
+group:
+title: AverageLabel
+
+---
+
+- 开发说明
+  > [作者@岑世超](xxx) > [git 地址](https://yuyan.antfin-inc.com/admarker/alipay-xlight-dmp-component/sprints)
+
+### 组件基本使用
 
 ```tsx
+/**
+ * background: '#f1f1f1'
+ */
 import React from 'react';
 import { AverageLabel } from 'react-dtcomponents';
 
@@ -20,3 +32,39 @@ export default () => {
   );
 };
 ```
+
+```ts
+interface IAverageLabelProps {
+  size: number;
+}
+```
+
+```js
+{
+  a: 1;
+}
+```
+
+```json
+{
+  "b": 1
+}
+```
+
+## AverageLabel & 事件）
+
+| 参数 | 说明         | 类型   | 是否必填 | 默认值 |
+| :--- | :----------- | :----- | :------- | :----- |
+| size | 一行展示几个 | number | 否       | 3      |
+
+## AverageLabel.Item & 事件）
+
+| 参数  | 说明         | 类型   | 是否必填 | 默认值 |
+| :---- | :----------- | :----- | :------- | :----- |
+| label | 文案         | string | 否       | -      |
+| key   | key 唯一标示 | string | 是       | -      |
+| value | 值           | string | 是       | -      |
+
+## 组件迭代
+
+- [迭代地址](xxxx)
