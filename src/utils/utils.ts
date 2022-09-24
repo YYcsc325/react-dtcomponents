@@ -7,6 +7,7 @@ import {
 } from 'react';
 
 import classNames from 'classnames';
+import PrefixClsEnums from '@/common/enums/prefixClsEnums';
 
 export const isArray =
   Array.isArray ||
@@ -107,20 +108,37 @@ export function filterChildrenName<P = any>(
 
 export function createPrefixCls(
   namespace: string,
-  styles: any,
-  prefix: string = 'dt',
+  prefix: string = PrefixClsEnums.DT,
 ) {
   if (!namespace) throw new Error('命名空间为必须传递参数');
 
-  return (...args: string[]) => {
-    const classes = args.map(
-      (name) => styles[`${prefix}-${namespace}${name ? `-${name}` : ''}`],
+  return (...names: string[]) => {
+    const classes = names.map((name) =>
+      name ? `${prefix}-${namespace}-${name}` : '',
     );
     if (classes.length) return classNames(classes);
 
-    return styles[`${prefix}-${namespace}`];
+    return `${prefix}-${namespace}`;
   };
 }
+
+// css模块化
+// export function createPrefixCls(
+//   namespace: string,
+//   styles: any,
+//   prefix: string = 'dt',
+// ) {
+//   if (!namespace) throw new Error('命名空间为必须传递参数');
+
+//   return (...args: string[]) => {
+//     const classes = args.map(
+//       (name) => styles[`${prefix}-${namespace}${name ? `-${name}` : ''}`],
+//     );
+//     if (classes.length) return classNames(classes);
+
+//     return styles[`${prefix}-${namespace}`];
+//   };
+// }
 
 /** 递归重写数据 */
 /** 还存在问题是children的类型如何定义 */

@@ -1,7 +1,8 @@
 import React, { FC, useState } from 'react';
-import styles from './index.less';
 import ColorGroup from './ColorGroup';
 import { Popover } from 'antd';
+
+import './index.less';
 
 interface ColorModifierProps {
   [x: string]: any;
@@ -24,7 +25,7 @@ const ColorModifier: FC<ColorModifierProps> = ({ value, onChange }) => {
 
   return (
     <Popover
-      overlayClassName={styles['colorModifierBox']}
+      overlayClassName={'colorModifierBox'}
       content={<ColorGroup {...popoverData} />}
       placement="leftTop"
       trigger="click"
@@ -32,7 +33,7 @@ const ColorModifier: FC<ColorModifierProps> = ({ value, onChange }) => {
       onVisibleChange={handleVisibleChange}
     >
       <span
-        className={styles['colorModifierBox-content']}
+        className={'colorModifierBox-content'}
         style={{ background: value }}
       />
     </Popover>

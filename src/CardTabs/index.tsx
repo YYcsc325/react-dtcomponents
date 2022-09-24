@@ -2,10 +2,10 @@ import React, { FC, useCallback, useState, useMemo } from 'react';
 import classNames from 'classnames';
 import { createPrefixCls, filterChildren } from '@/utils/utils';
 
-import styles from './index.less';
+import './index.less';
 
-const prefixClsTabs = createPrefixCls('card-tabs', styles);
-const prefixClsTab = createPrefixCls('tab', styles);
+const prefixClsTabs = createPrefixCls('card-tabs');
+const prefixClsTab = createPrefixCls('tab');
 
 type onChange = (
   e: React.MouseEvent<HTMLDivElement, MouseEvent>,

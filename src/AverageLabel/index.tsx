@@ -9,10 +9,10 @@ import {
 } from '@/utils/utils';
 import { uniqueId } from 'lodash';
 
-import styles from './index.less';
+import './index.less';
 
-const createPrefixLabel = createPrefixCls('average-warp', styles);
-const createPrefixLabelItem = createPrefixCls('average-item', styles);
+const createPrefixLabel = createPrefixCls('average-warp');
+const createPrefixLabelItem = createPrefixCls('average-item');
 
 interface IAverageItemProps {
   splitLabel?: boolean;

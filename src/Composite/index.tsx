@@ -2,11 +2,11 @@ import React, { FC, useCallback } from 'react';
 import classNames from 'classnames';
 import { findChild, createPrefixCls } from '@/utils/utils';
 
-import styles from './index.less';
+import './index.less';
 
-const prefixClsComposite = createPrefixCls('composite', styles);
-const prefixClsCompositeLeft = createPrefixCls('composite-left', styles);
-const prefixClsCompositeRight = createPrefixCls('composite-right', styles);
+const prefixClsComposite = createPrefixCls('composite');
+const prefixClsCompositeLeft = createPrefixCls('composite-left');
+const prefixClsCompositeRight = createPrefixCls('composite-right');
 
 export interface ICompositeProps {
   className?: string;

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Tree } from 'antd';
-import styles from './index.less';
+import './index.less';
 
 const { TreeNode } = Tree;
 
@@ -180,7 +180,7 @@ class FormTree extends Component<any, any> {
     const { disabled } = this.props;
     return (
       <Tree
-        className={styles.treeStyles}
+        className={'treeStyles'}
         checkable
         disabled={disabled}
         onExpand={this.onExpand}

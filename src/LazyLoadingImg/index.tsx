@@ -9,9 +9,9 @@ import React, {
 import { LoadingOutlined } from '@ant-design/icons';
 import { createPrefixCls } from '@/utils/utils';
 
-import styles from './index.less';
+import './index.less';
 
-const prefixCls = createPrefixCls('lazy-loading', styles);
+const prefixCls = createPrefixCls('lazy-loading');
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 

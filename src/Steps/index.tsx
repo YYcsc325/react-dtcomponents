@@ -2,7 +2,7 @@ import React, { FC, useRef, useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { childrenToArray, childrenClone } from '@/utils/utils';
 
-import styles from './index.less';
+import './index.less';
 
 interface IStepsProps {
   current: number;
@@ -20,7 +20,7 @@ const Steps: FC<IStepsProps> & {
 } = ({ children, current }) => {
   const childList = childrenToArray(children);
   return (
-    <div className={styles.steps}>
+    <div className={'steps'}>
       {childList.map((child: any, index: number) => {
         const targetIndex = index + 1;
         return childrenClone(child, {
@@ -45,20 +45,20 @@ const Step: FC<IStepProps> = ({ index, title, current, grow }) => {
   }, []);
 
   return (
-    <div className={styles.step} style={{ flexGrow: grow }} ref={stepRef}>
-      <div className={styles['step-warp']}>
+    <div className={'step'} style={{ flexGrow: grow }} ref={stepRef}>
+      <div className={'step-warp'}>
         <span
-          className={classNames(styles['step-index'], {
-            [styles['step-active']]: current === index,
+          className={classNames('step-index', {
+            ['step-active']: current === index,
           })}
         >
           {index}
         </span>
-        <span className={styles['step-title']}>{title}</span>
+        <span className={'step-title'}>{title}</span>
       </div>
       {Boolean(grow) && (
         <div
-          className={styles['step-line']}
+          className={'step-line'}
           style={{
             width: `calc(100% - ${computedWidth + 20}px)`,
             left: `${computedWidth + 10}px`,

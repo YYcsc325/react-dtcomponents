@@ -12,14 +12,18 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "typings": "dist/index.d.ts",
+  "module": "es/index.js",
+  "typings": "es/index.d.ts",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
   "sideEffects": [
-    "*.css"
+    "*.css",
+    "**/*.less"
+  ],
+  "files": [
+    "es",
+    "dist"
   ],
   "homepage": "https://yycsc325.github.io/react-dtcomponents",
   "repository": {
@@ -36,21 +40,37 @@
   },
   "dependencies": {
     "antd": "^4.16.13",
-    "babel-plugin-import": "^1.13.3",
     "classnames": "^2.3.1",
     "lodash": "^4.17.21",
     "react": "^16.12.0",
     "react-color": "^2.19.3",
-    "react-dom": "^17.0.2"
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^9.5.0",
+    "@types/jest": "^25.2.1",
+    "@types/lodash": "^4.14.185",
+    "@types/react": "^17.x",
     "@types/react-color": "^3.0.6",
     "@umijs/test": "^3.0.5",
-    "dumi": "^1.0.16",
-    "father-build": "^1.17.2",
+    "babel-plugin-import": "^1.13.3",
+    "dumi": "^1.1.0",
+    "father": "^4.0.0-rc.2",
     "gh-pages": "^3.0.0",
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
     "yorkie": "^2.0.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "@/(.*)": "<rootDir>/src/$1"
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }

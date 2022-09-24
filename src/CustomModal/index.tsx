@@ -5,9 +5,9 @@ import classNames from 'classnames';
 import { createPrefixCls } from '@/utils/utils';
 import { ModalProps } from 'antd/lib/modal';
 
-import styles from './index.less';
+import './index.less';
 
-const prefixCls = createPrefixCls('custom-modal', styles);
+const prefixCls = createPrefixCls('custom-modal');
 
 class CustomModal extends Component<ModalProps> {
   static showModal = (props: any) => {

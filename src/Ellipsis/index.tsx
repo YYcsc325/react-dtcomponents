@@ -3,9 +3,9 @@ import classNames from 'classnames';
 import { createPrefixCls } from '@/utils/utils';
 import { Popover } from 'antd';
 
-import styles from './index.less';
+import './index.less';
 
-const prefixCls = createPrefixCls('ellipsis', styles);
+const prefixCls = createPrefixCls('ellipsis');
 
 export interface IEllipsisProps {
   lineClamps?: number;
