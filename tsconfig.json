@@ -12,11 +12,9 @@
     "baseUrl": "./src",
     "skipLibCheck": true,
     "declaration": true, // ts文件生成配置， 跟baseUrl paths的路径配置
-    "sourceMap": true,
     "noImplicitAny": false,
     "paths": {
-      "@/*": ["*"],
-      "@@/*": [".umi/*"]
+      "@/*": ["*"]
     }
   },
   "exclude": ["node_modules", "lib", "es", "dist"],
