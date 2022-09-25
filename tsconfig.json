@@ -3,52 +3,22 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    "importHelpers": true,
+    "lib": ["dom", "esnext"],
     "jsx": "react",
-    "rootDir": ".",
+    // "rootDir": ".",
     "esModuleInterop": true,
-    "sourceMap": true,
-    "baseUrl": "./src",
+    "types": ["jest", "node"],
     "strict": true,
+    "baseUrl": "./src",
+    "skipLibCheck": true,
+    "declaration": true, // ts文件生成配置， 跟baseUrl paths的路径配置
+    "sourceMap": true,
+    "noImplicitAny": false,
     "paths": {
-      "@/*": ["src/*"],
-      "@@/*": ["src/.umi/*"]
-    },
-    "declaration": true,
-    "allowSyntheticDefaultImports": true
+      "@/*": ["*"],
+      "@@/*": [".umi/*"]
+    }
   },
-  "exclude": [
-    "node_modules",
-    "lib",
-    "es",
-    "dist",
-    "**/__test__",
-    "test",
-    "docs",
-    "tests"
-  ],
+  "exclude": ["node_modules", "lib", "es", "dist"],
   "include": ["src/**/*", "typing.d.ts"]
 }
-// {
-//   "compilerOptions": {
-//     "target": "esnext",
-//     "module": "esnext",
-//     "moduleResolution": "node",
-//     "lib": ["dom", "esnext"],
-//     "jsx": "react",
-//     "esModuleInterop": true,
-//     "types": ["jest", "node"],
-//     "strict": true,
-//     "baseUrl": "./",
-//     "skipLibCheck": true,
-//     "declaration": true, ts文件生成配置， 跟baseUrl paths的路径配置
-//     "sourceMap": true,
-//     "noImplicitAny": false,
-//     "paths": {
-//       "@/*": ["*"],
-//       "@@/*": [".umi/*"]
-//     }
-//   },
-//   "exclude": ["node_modules", "lib", "es", "dist"],
-//   "include": ["src/**/*", "typing.d.ts"]
-// }
