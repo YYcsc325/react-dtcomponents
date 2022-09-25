@@ -8,24 +8,47 @@
     "rootDir": ".",
     "esModuleInterop": true,
     "sourceMap": true,
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "strict": true,
     "paths": {
       "@/*": ["src/*"],
       "@@/*": ["src/.umi/*"]
     },
+    "declaration": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*", "typings.d.ts"],
   "exclude": [
     "node_modules",
     "lib",
     "es",
     "dist",
-    "typings",
     "**/__test__",
     "test",
     "docs",
     "tests"
-  ]
+  ],
+  "include": ["src/**/*", "typing.d.ts"]
 }
+// {
+//   "compilerOptions": {
+//     "target": "esnext",
+//     "module": "esnext",
+//     "moduleResolution": "node",
+//     "lib": ["dom", "esnext"],
+//     "jsx": "react",
+//     "esModuleInterop": true,
+//     "types": ["jest", "node"],
+//     "strict": true,
+//     "baseUrl": "./",
+//     "skipLibCheck": true,
+//     "declaration": true, ts文件生成配置， 跟baseUrl paths的路径配置
+//     "sourceMap": true,
+//     "noImplicitAny": false,
+//     "paths": {
+//       "@/*": ["*"],
+//       "@@/*": [".umi/*"]
+//     }
+//   },
+//   "exclude": ["node_modules", "lib", "es", "dist"],
+//   "include": ["src/**/*", "typing.d.ts"]
+// }
